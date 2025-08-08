@@ -26,7 +26,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "private": true,
   "workspaces": [
-    "./examples/*"
+    "./examples/*/*"
   ],
   "dependencies": {
     "@canva/app-i18n-kit": "^1.0.3",
