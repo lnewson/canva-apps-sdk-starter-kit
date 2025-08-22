@@ -1,6 +1,32 @@
 # Changelog
 
-## 2025-07-23
+## v47.0.0 - 2025-08-22
+
+### Added
+
+- Added an optional step to setup the [Canva Dev MCP Server](https://www.canva.dev/docs/apps/mcp-server/) in `README.md`.
+
+### Changed
+
+- Grouped `/examples` by functionality to help with discoverability. Updated directory structure and updated the start script to support the new structure.
+- Renamed `/examples/text_translate` to `/examples/text_translation`.
+- Updated `examples/design_token` and `examples/page_addition` to use `design.getDesignMetadata` as `design.getDefaultPageDimensions` is deprecated.
+- Updated the intro wording for the `app_elements` examples with a minor text edit.
+- Updated the `design_interaction/page_addition` example's YouTube video to replaced it with a more appropriate one.
+- Updated the `/design_interaction/page_addition/` example to not use the deprecated `title` property, and use `ariaLabel` instead.
+- Updated the `ui/masonry` example to replace the Picsum API with some static images from <https://www.canva.dev/example-assets/images/>.
+- Upgraded `@canva/app-components` to version `1.3.1`.
+
+### Deprecated
+
+- `@canva/design`: Deprecate `design.getDefaultPageDimensions`, use `design.getDesignMetadata` instead. [See the documentation](https://www.canva.dev/docs/apps/api/latest/design-get-design-metadata/).
+
+### Fixed
+
+- Replaced a broken YouTube video used for demonstrating embeds in the example apps.
+- Updated the `README.md` and other documentation to reflect the new location of `CANVA_APP_ID` and `CANVA_APP_ORIGIN` environment variables in the Developer Portal.
+
+## v46.0.0 - 2025-07-23
 
 ### 🐞 Fixed
 
@@ -14,7 +40,7 @@
 - Upgraded `@canva/app-i18n-kit` to version `1.0.3`.
 - Improved code organization by sorting imports consistently across all files.
 - `examples`
-  - Simplify `examples/data_connector_intent` by refactoring to use static data structure.
+  - Simplified `examples/intents/data_connector_intent` by refactoring to use static data structure.
 - Dependencies audit bringing modules up to date:
 
 ```text
@@ -40,7 +66,7 @@
   webpack-cli                                5.1.4   ->   6.0.1
 ```
 
-## 2025-06-26
+## v45.0.0 - 2025-06-26
 
 ### 🧰 Added
 
@@ -81,7 +107,7 @@
   - Updated `examples/authentication` to better align with the API spec.
   - Updated `examples/design_editing` to reflect the latest `@canva/design` changes.
 
-## 2025-06-12
+## v44.0.0 - 2025-06-12
 
 ### 🧰 Added
 
@@ -91,13 +117,13 @@
 
 - Added the new `@canva/intents` package at version `2.0.0` and updated `examples/data_connector_intent` to match
 
-## 2025-05-19
+## v43.0.0 - 2025-05-19
 
 ### 🧰 Added
 
 - Added `examples/data_connector_intent` as a basic implementation of the data connector intent.
 
-## 2025-04-30
+## v42.0.0 - 2025-04-30
 
 ### 🔧 Changed
 
@@ -111,7 +137,7 @@
   - Now supporting `video/x-msvideo` as an allowed MIME type
 - Updated `@canva/design` to version `2.4.1` from `2.4.0` to fix a bug affecting unit tests without mocks.
 
-## 2025-03-24
+## v41.0.0 - 2025-03-24
 
 ### 🧰 Added
 
@@ -121,7 +147,7 @@
 
 - Removed local eslint configs and rules in favour of `@canva/app-eslint-plugin`.
 
-## 2025-02-20
+## v40.0.0 - 2025-02-20
 
 ### 🧰 Added
 
@@ -146,14 +172,14 @@
 
 - Upgraded `@canva/app-ui-kit` to version `4.8.0` Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
 
-## 2025-02-05
+## v39.0.0 - 2025-02-05
 
 ### 🔧 Changed
 
 - Upgraded `@canva/app-ui-kit` to version `4.7.1` Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
 - Introduced a new `eslint` rule to prevent using `localStorage` or `sessionStorage` for storing keys or other sensitive information. If these APIs are used for non-sensitive data, the rule can be ignored using an eslint-disable comment.
 
-## 2025-01-22
+## v38.0.0 - 2025-01-22
 
 ### 🔧 Changed
 
@@ -178,7 +204,7 @@
   webpack-dev-server                         5.1.0   →    5.2.0
 ```
 
-## 2024-12-19
+## v37.0.0 - 2024-12-19
 
 ### 🎁 [Developer Christmas](https://community.canva.dev/t/developer-christmas-2024/5492)
 
@@ -204,7 +230,7 @@
 
 - The existing `text_query` example app in favour of the more comprehensive `text_translate` example app
 
-## 2024-12-18
+## v36.0.0 - 2024-12-18
 
 ### 🎁 [Developer Christmas](https://community.canva.dev/t/developer-christmas-2024/5492)
 
@@ -214,7 +240,7 @@
 
 - Upgraded `@canva/app-ui-kit` to version `4.5.0` Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
 
-## 2024-12-17
+## v35.0.0 - 2024-12-17
 
 ### 🎁 [Developer Christmas](https://community.canva.dev/t/developer-christmas-2024/5492)
 
@@ -225,7 +251,7 @@
 - `scripts/start/app_runner.ts`
   - Generate a Preview URL on app start to preview an app directly within the Canva Editor.
 
-## 2024-12-16
+## v34.0.0 - 2024-12-16
 
 ### 🎁 [Developer Christmas](https://community.canva.dev/t/developer-christmas-2024/5492)
 
@@ -281,7 +307,7 @@
   webpack                                   5.96.1   →   5.97.1
 ```
 
-## 2024-11-28
+## v33.0.0 - 2024-11-28
 
 ### 🔧 Changed
 
@@ -289,7 +315,7 @@
 - Upgraded `@canva/app-i18n-kit` to version `1.0.1`
 - Upgraded `react-intl` to version `6.8.7`
 
-## 2024-11-13
+## v32.0.0 - 2024-11-13
 
 ### 🧰 Added
 
@@ -344,14 +370,14 @@
   - Upgraded `app-ui-kit` to version `4.3.0`. Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
   - Updated snapshots in `examples/ui_test`.
 
-## 2024-10-30
+## v31.0.0 - 2024-10-30
 
 ### 🔧 Changed
 
 - `@canva/app-ui-kit`
   - Upgraded `app-ui-kit` to version `4.2.0`. Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
 
-## 2024-10-22
+## v30.0.0 - 2024-10-22
 
 ### 🧰 Added
 
@@ -415,7 +441,7 @@
 - Moved `.env` to a `.env.template` and added to the `.gitignore`, a postinstall script now copies this locally.
 - Other minor improvements, cleanup and fixes of stale config.
 
-## 2024-09-25
+## v29.0.0 - 2024-09-25
 
 ### 🔨 Breaking changes
 
@@ -458,7 +484,7 @@
 
 - Removed authentication from `examples/digital_asset_management` pending migration to `auth.requestAuthorization`.
 
-## 2024-08-27
+## v28.0.0 - 2024-08-27
 
 ### 🔨 Breaking changes
 
@@ -578,7 +604,7 @@
   - The Preview Data APIs have been removed, and are no longer available as a preview SDK.
   - The `data_provider_basic` and `data_provider_options` examples have also been removed.
 
-## 2024-07-24
+## v27.0.0 - 2024-07-24
 
 ### 🧰 Added
 
@@ -592,7 +618,7 @@
 - `examples/fonts`
   - Updated font preview img to be a non-interactive ImageCard.
 
-## 2024-07-23
+## v26.0.0 - 2024-07-23
 
 ### 🧰 Added
 
@@ -610,7 +636,7 @@
   - Updated [asset.openColorSelector](https://www.canva.dev/docs/apps/using-color-selectors) and some related types to be public.
 - Updated color example to use `@canva/asset` instead of `@canva/preview/asset`
 
-## 2024-07-18
+## v25.0.0 - 2024-07-18
 
 ### 🔨 Breaking changes
 
@@ -633,7 +659,7 @@
 
 - A number of changes to various files to fix or suppress various eslint errors and warnings.
 
-## 2024-07-03
+## v24.0.0 - 2024-07-03
 
 ### 🧰 Added
 
@@ -651,7 +677,7 @@
 - Upgraded `react`, `react-dom` and their type packages to version `18.3.1`.
 - Removed unnecessary react imports by switching to `jsx-react`
 
-## 2024-06-20
+## v23.0.0 - 2024-06-20
 
 ### 🔧 Changed
 
@@ -659,7 +685,7 @@
   - Upgraded to version `1.6.0` which has the following changes:
     - Added the ability to filter by fontRefs in [findFonts API](https://www.canva.dev/docs/apps/api/asset-find-fonts/#filtering).
 
-## 2024-06-04
+## v22.0.0 - 2024-06-04
 
 ### 🧰 Added
 
@@ -682,7 +708,7 @@
   - Upgraded to version `1.9.0` which has the following changes:
     - Added the ability to read/write video via the selection API.
 
-## 2024-05-09
+## v21.0.0 - 2024-05-09
 
 ### 🧰 Added
 
@@ -696,7 +722,7 @@
 - `@canva/app-ui-kit`
   - Upgraded `app-ui-kit` to version `3.5.1`. Please see the [changelog](https://www.canva.dev/docs/apps/app-ui-kit/changelog/) for the list of changes.
 
-## 2024-05-06
+## v20.0.0 - 2024-05-06
 
 ### 🧰 Added
 
@@ -717,7 +743,7 @@
 - `README.md`
   - Minor ordering changes of content in the repository [README.md](/README.md).
 
-## 2024-04-23
+## v19.0.0 - 2024-04-23
 
 ### 🧰 Added
 
@@ -738,7 +764,7 @@
 - `examples`
   - Removed `OverlayLoadingIndicator` React component to [/examples/image_editing_overlay](/examples/image_editing_overlay) due to issue with cropped and flipped image.
 
-## 2024-04-16
+## v18.0.0 - 2024-04-16
 
 ### 🧰 Added
 
@@ -757,7 +783,7 @@
 
 - Updated `@canva/app-components` version in digital_asset_management example.
 
-## 2024-04-10
+## v17.0.0 - 2024-04-10
 
 ### 🧰 Added
 
@@ -776,7 +802,7 @@
 - `examples`
   - Fixed some authentication examples using a deprecated parameter instead of the JWT middleware
 
-## 2024-04-02
+## v16.0.0 - 2024-04-02
 
 ### 🧰 Added
 
@@ -790,7 +816,7 @@
   - Updated the [/examples/design_token](/examples/design_token) example to include more checks against important JWT claims.
   - Downgraded ExpressJS module used in [/examples/design_token](/examples/design_token) from v5 to v4 to be consistent with other examples.
 
-## 2024-03-21
+## v15.0.0 - 2024-03-21
 
 ### 🧰 Added
 
@@ -803,7 +829,7 @@
 
 - Removed the `.devcontainer` directory.
 
-## 2024-03-20
+## v14.0.0 - 2024-03-20
 
 ### 🧰 Added
 
@@ -822,7 +848,7 @@
 - Minor markdown formatting changes in [README.md](./README.md)
 - Add npm workspaces so that individual examples can manage their own dependencies.
 
-## 2024-03-13
+## v13.0.0 - 2024-03-13
 
 ### 🧰 Added
 
@@ -843,7 +869,7 @@
   - Updated example apps to remove usages of the `id` field.
 - Updated `@canva/app-components` to version `1.0.0-beta.10` in `digital_asset_management` example.
 
-## 2024-02-29
+## v12.0.0 - 2024-02-29
 
 ### 🧰 Added
 
@@ -896,7 +922,7 @@
 
   > If you've added new components in `/components`, you'll have to re-add the config changes mentioned above.
 
-## 2024-02-19
+## v11.0.0 - 2024-02-19
 
 ### 🔨 Breaking changes
 
@@ -931,7 +957,7 @@
   - Updated [drag_and_drop_text](examples/drag_and_drop_text), [app_text_elements](examples/app_text_elements), [native_text_elements](examples/native_text_elements) example apps to use more `fontWeight` values.
 - Refactored the app start script in `/scripts` to use typescript, and better organized the code.
 
-## 2023-12-14
+## v10.0.0 - 2023-12-14
 
 ### 🧰 Added
 
@@ -978,7 +1004,7 @@
 - [/sdk](/sdk)
   - Bundled source directories for the SDKs published to NPM have been removed.
 
-## 2023-12-13
+## v9.0.0 - 2023-12-13
 
 ### 🧰 Added
 
@@ -1007,7 +1033,7 @@
 
   The drag and drop example apps have been updated to use the new components accordingly.
 
-## 2023-12-12
+## v8.0.0 - 2023-12-12
 
 ### 🧰 Added
 
@@ -1018,7 +1044,7 @@
 
 - Updated `nodemon` to version `3.0.1`. [Changelog](https://github.com/remy/nodemon/releases).
 
-## 2023-11-09
+## v7.0.0 - 2023-11-09
 
 ### 🔨 Breaking changes
 
@@ -1043,7 +1069,7 @@
 
 - Grouped stories in `/storybook/stories` by functionality
 
-## 2023-11-02
+## v6.0.0 - 2023-11-02
 
 ### 🔨 Breaking changes
 
@@ -1074,7 +1100,7 @@
   - Removed custom webpack loader for these icons
 - Removed `.thumbnailGrid` class from `styles/components.css`. Please use the `<Grid />` component from `app-ui-kit` instead
 
-## 2023-10-18
+## v7.0.0 - 2023-10-18
 
 ### 🔨 Breaking changes
 
@@ -1087,7 +1113,7 @@
 
 - Corrected CORS documentation in the authentication example as it incorrectly stated that the policy should be set to your backends domain rather than the domain of your app in Canva.
 
-## 2023-09-18
+## v6.0.0 - 2023-09-18
 
 ### 🧰 Added
 
@@ -1101,7 +1127,7 @@
 - Fixed a number of occurrences where some icons had inconsistent dimensions and fill color.
 - Fixed an issue where draggable images did not have the correct opacity.
 
-## 2023-08-24
+## v5.0.0 - 2023-08-24
 
 ### 🧰 Added
 
@@ -1109,7 +1135,7 @@
   - Added support for Lottie in `upload`
   - Added support for WebP in `upload`
 
-## 2023-08-17
+## v4.0.0 - 2023-08-17
 
 ### 🧰 Added
 
@@ -1130,7 +1156,7 @@
 
 - Updated draggable example apps to include click to insert functionality by default.
 
-## 2023-07-27
+## v3.0.0 - 2023-07-27
 
 ### 💥 Breaking changes
 
@@ -1153,7 +1179,7 @@
 - Updated code formatter command to check css files and check files in the `storybook` folder
 - Updated `@canva/app-ui-kit` to `1.0.0`. There are no changes from `1.0.0-beta.2`.
 
-## 2023-06-14
+## v2.0.0 - 2023-06-14
 
 ### 🐞 Fixed
 
@@ -1163,6 +1189,6 @@
 
 - Removed unused legacy token files
 
-## 2023-06-13
+## v1.0.0 - 2023-06-13
 
 Initial public release
