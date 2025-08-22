@@ -51,7 +51,7 @@ To preview an app:
 
 The app will appear in the side panel.
 
-### (Optional) Step 3: Enable Hot Module Replacement
+### Step 3 (Optional): Enable Hot Module Replacement
 
 By default, every time you make a change to an app, you have to reload the entire app to see the results of those changes. If you enable [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) (HMR), changes will be reflected without a full reload, which significantly speeds up the development loop.
 
@@ -98,7 +98,7 @@ To preview apps in Safari:
 npm start --use-https
 
 # Run an example
-npm start <example-name> --use-https
+npm start <example_name> --use-https
 ```
 
 2. Navigate to <https://localhost:8080>.
@@ -114,6 +114,10 @@ You need to bypass the invalid security certificate warning every time you start
 
 </details>
 
+### Step 4 (Optional): Setup the Canva Dev MCP Server
+
+If you're using AI coding tools, such as Cursor or Claude Code, you can connect to the Canva Dev MCP Server to supercharge your development workflow. See this [setup guide](https://www.canva.dev/docs/apps/mcp-server/) to get started.
+
 ## Running an example
 
 The `examples` folder contains demonstration apps for a variety of Canva APIs.
@@ -127,25 +131,27 @@ npm start examples
 You can use arrow keys to navigate the list and press enter to run a specific example. It will look something like this:
 
 ```bash
-   npm start examples
+  npm start examples
 
-   ? Which example would you like to run? ›
-   ❯   app element children
-       app embed elements
-       app image elements
-       app shape elements
-       app text elements
-       asset upload
-       authentication
-       color
-       design editing
-    ↓  design token
+  ? Which example would you like to run? ›
+  ❯   app elements > app element children
+      app elements > app embed elements
+      app elements > app image elements
+      app elements > app shape elements
+      app elements > app text elements
+      app elements > app video elements
+      assets and media > asset upload
+      assets and media > digital asset management
+      assets and media > fonts
+    ↓ assets and media > image editing overlay
 ```
 
 To start a specific example app, run the following command:
 
 ```bash
-npm start <example-name>
+npm start <example_category>/<example_name>
+// or simply
+npm start <example_name>
 ```
 
 ## Running an example's backend
