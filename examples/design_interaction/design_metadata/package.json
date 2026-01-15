@@ -1,0 +1,7 @@
+{
+  "name": "design_metadata",
+  "title": "Design metadata",
+  "description": "An example app demonstrating how apps can retrieve information about the design.",
+  "author": "Canva Pty Ltd.",
+  "license": "Please refer to the LICENSE.md file in the root directory"
+}

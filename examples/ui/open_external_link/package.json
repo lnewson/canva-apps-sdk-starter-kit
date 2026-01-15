@@ -1,0 +1,7 @@
+{
+  "name": "open_external_link",
+  "title": "Open external link",
+  "description": "An example app demonstrating how to open external URLs from an app.",
+  "author": "Canva Pty Ltd.",
+  "license": "Please refer to the LICENSE.md file in the root directory"
+}
