@@ -14,7 +14,9 @@
 - Upgraded `@canva/app-i18n-kit` to version `1.0.3`.
 - Improved code organization by sorting imports consistently across all files.
 - `examples`
-  - Simplify `examples/data_connector_intent` by refactoring to use static data structure.
+  - Simplified `examples/intents/data_connector_intent` by refactoring to use static data structure.
+  - Grouped examples by functionality in `/examples` to help with discoverability. Updated directory structure and updated the start script for the change.
+  - Renamed `/text_translate` example to `text_translation`.
 - Dependencies audit bringing modules up to date:
 
 ```text
